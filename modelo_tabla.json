@@ -1,0 +1,13 @@
+{
+  "date": {
+    "rutina": [{
+      "ejercicio" : {
+        "nombre": "biceps"
+      },
+      "serie" : [{
+        "peso" :"",
+        "repeticiones": ""
+      }] 
+    }]
+  }
+}
