@@ -1,0 +1,1 @@
+//Controlador del gym (aqui van los metodos y todo lo que se vaya a realizar)

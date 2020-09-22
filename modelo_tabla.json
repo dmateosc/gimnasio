@@ -1,13 +1,88 @@
 {
-  "date": {
-    "rutina": [{
-      "ejercicio" : {
-        "nombre": "biceps"
-      },
-      "serie" : [{
-        "peso" :"",
-        "repeticiones": ""
-      }] 
-    }]
-  }
+  "usuario": { 
+    "nombre": "XX",
+    "id": "identificador creado en la bd"
+  },
+  "ejercicios": [
+    { 
+      "diaEntrenamiento": [
+        "",
+        ""
+      ],
+      "rutina": [
+        { 
+          "ejercicio": { 
+            "nombre": "biceps",
+            "idEjercicio": ""
+          },
+          "serie": [
+            { 
+              "peso": "",
+              "repeticiones": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "diaEntrenamiento": "",
+      "rutina": [
+        {
+          "ejercicio": {
+            "nombre": "biceps",
+            "idEjercicio": ""
+          },
+          "serie": [
+            {
+              "peso": "",
+              "repeticiones": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dieta": [ 
+    {
+      "diaDieta": [ 
+        ""
+      ],
+      "totalCalorias": [
+        ""
+      ],
+      "desayuno": [
+        {
+          "nombreAlimento": "",
+          "cantidadPeso": 111,
+          "recetasDesayuno": [
+            { 
+              "nombre": "nombre"
+            }
+          ]
+        }
+      ],
+      "comida": [
+        {
+          "nombreAlimento": "",
+          "cantidadPeso": 111, 
+          "recetasComida": [
+            { 
+              "nombre": "nombre"
+            }
+          ]
+        }
+      ],
+      "cena": [
+        {
+          "nombreAlimento": "",
+          "cantidadPeso": 111, 
+          "recetasCena": [
+            { 
+              "nombre": "nombre"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
