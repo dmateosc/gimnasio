@@ -24,5 +24,4 @@ var Clase = Schema({
     ]
     
 })
-console.log(Clase);
 module.exports = mongoose.model('Clase', Clase);

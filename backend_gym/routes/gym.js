@@ -12,6 +12,8 @@ var multer = require('multer');
 
 
 router.get(['/user/:nickname','/user/:id','/user/:email'], UserController.getUser);
+router.post('/create-user',UserController.createUser);
+router.post('/login',UserController.login);
 
 
 module.exports = router;

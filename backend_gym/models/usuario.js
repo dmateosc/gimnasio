@@ -40,5 +40,4 @@ var Usuario = Schema({
     
     })
 
-console.log(Usuario);
 module.exports = mongoose.model('User', Usuario);
