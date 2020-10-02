@@ -8,10 +8,7 @@ var Ejercicio = Schema({
 
 
     nombre: String,
-    musculos: [{
-        type: mongoose.Schema.Types.ObjectId, ref : 'Musculo'
-    }
-    ],
+    musculos: [String],
     imagenes : [String]
     
 })
