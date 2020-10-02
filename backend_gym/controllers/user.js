@@ -3,13 +3,10 @@
 
 var User = require('../models/usuario');
 var controllerClase = require('./clase');
-var fs = require('fs');
-var path = require('path');
-const { map } = require('../app');
 
 
 
-var controllerUser = {
+var UserController = {
 
     //obtener usuario
     getUser: function (req, res) {

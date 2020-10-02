@@ -4,10 +4,8 @@
 
 var Clase = require('../models/clase');
 var User = require('../models/usuario');
-var fs = require('fs');
-var path = require('path');
 
-var controllerClase = {
+var ClaseController = {
 
     //inicio getClase
     getClase: function (req, res) {

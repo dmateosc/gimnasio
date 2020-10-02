@@ -7,7 +7,7 @@ var Musculo = require('../models/musculo');
 var Ejercicio = require('../models/ejercicio');
 
 
-var gymController = {
+var GymController = {
 
 
     uploadEjercicioImage: function (req, res) {
