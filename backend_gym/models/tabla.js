@@ -7,11 +7,11 @@ var TablaSchema = new Schema({
     usuario :{
         type: mongoose.Schema.Types.ObjectId, ref: 'User'
     },
+    dias:[Date],
     ejercicios: [{
         ejercicio:{
             type: mongoose.Schema.Types.ObjectId, ref: 'Ejercicio'
         },
-        dias:[Date],
         series:[
             {
                 peso: Number,
