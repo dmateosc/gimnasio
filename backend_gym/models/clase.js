@@ -9,9 +9,7 @@ var Clase = Schema({
 
     nombre: String,
     instructor: [{
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: 'User'
-        //Objeto del tipo usuario
+        nombre: String
     }],
     horarios: [
         {

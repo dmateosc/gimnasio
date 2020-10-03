@@ -8,8 +8,9 @@ var Schema = mongoose.Schema;
 var Usuario = Schema({
 
     
-    
+
         nickname: String,
+        photo: String,
         nombre: String ,
         apellidos: String,
         dni: String,
@@ -21,7 +22,8 @@ var Usuario = Schema({
             peso: Number,
             masa_corporal: String ,
             musculo: String,
-            grasa: String 
+            grasa: String,
+            grasa_visceral: String 
         }],
         objetivo: String,
         entrenador: {

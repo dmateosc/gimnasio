@@ -5,9 +5,49 @@ var fs = require('fs');
 var path = require('path');
 var Musculo = require('../models/musculo');
 var Ejercicio = require('../models/ejercicio');
+var User = require('../models/usuario');
 
 
 var GymController = {
+
+
+    uploadUserImage: function (req, res) {
+        var projectId = req.params.id;
+        var nickname = req.params.nickname;
+
+        var fileName = req.file;
+        var filePath = req.file.path;
+        var fileSplit = filePath.split('\\');
+        var fileName = fileSplit[1];
+        var extSplit = fileName.split('\.');
+        var fileExt = extSplit[1];
+
+        if (nickname) {
+            User.updateOne({ nickname: nickname }, {
+                $set: { photo: fileName }
+            }, { new: true }, (err, imageUpdated) => {
+                if (err) return res.status(500).send("No se ha podido añadir la imagen");
+                if (!projectUpdated) return res.status(404).send({ message: 'El ejercicio no existe y no se ha podido añadir la imagen' });
+
+                return res.status(200).send({
+                    ejercicio: imageUpdated
+                });
+            });
+        } else if (projectId) {
+            Ejercicio.findByIdAndUpdate(projectId, {
+                $set: { photo: fileName }
+            }, { new: true }, (err, imageUpdated) => {
+                if (err) return res.status(500).send("No se ha podido añadir la imagen");
+                if (!projectUpdated) return res.status(404).send({ message: 'El ejercicio no existe y no se ha podido añadir la imagen' });
+
+                return res.status(200).send({
+                    ejercicio: imageUpdated
+                });
+            });
+
+        }
+
+    },
 
 
     uploadEjercicioImage: function (req, res) {
