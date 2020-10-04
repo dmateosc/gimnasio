@@ -3,10 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UserComponent } from './components/user/user.component';
+import { MuscleComponent } from './components/muscle/muscle.component';
+import { ExerciseComponent } from './components/exercise/exercise.component';
+import { TrainingComponent } from './components/training/training.component';
+import { ClassComponent } from './components/class/class.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserComponent,
+    MuscleComponent,
+    ExerciseComponent,
+    TrainingComponent,
+    ClassComponent
   ],
   imports: [
     BrowserModule,

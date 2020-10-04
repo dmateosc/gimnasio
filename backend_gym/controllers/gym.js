@@ -6,6 +6,7 @@ var path = require("path");
 var Musculo = require("../models/musculo");
 var Ejercicio = require("../models/ejercicio");
 var User = require("../models/usuario");
+const { map } = require("../app");
 
 var GymController = {
   uploadUserImage: function (req, res) {
@@ -137,7 +138,6 @@ var GymController = {
     var fileName = fileSplit[1];
     var extSplit = fileName.split(".");
     var fileExt = extSplit[1];
-
     if (nombreMusculo) {
       Musculo.updateOne(
         { name: nombreMusculo },
@@ -180,7 +180,7 @@ var GymController = {
               });
 
           return res.status(200).send({
-            musculol: imageUpdated,
+            musculo: imageUpdated,
           });
         }
       );
