@@ -60,4 +60,4 @@ var ClaseController = {
 
 }
 
-module.exports = null;
+module.exports = ClaseController;

@@ -27,7 +27,7 @@ var GymController = {
                 $set: { photo: fileName }
             }, { new: true }, (err, imageUpdated) => {
                 if (err) return res.status(500).send("No se ha podido añadir la imagen");
-                if (!projectUpdated) return res.status(404).send({ message: 'El ejercicio no existe y no se ha podido añadir la imagen' });
+                if (!imageUpdated) return res.status(404).send({ message: 'El ejercicio no existe y no se ha podido añadir la imagen' });
 
                 return res.status(200).send({
                     ejercicio: imageUpdated
@@ -38,7 +38,7 @@ var GymController = {
                 $set: { photo: fileName }
             }, { new: true }, (err, imageUpdated) => {
                 if (err) return res.status(500).send("No se ha podido añadir la imagen");
-                if (!projectUpdated) return res.status(404).send({ message: 'El ejercicio no existe y no se ha podido añadir la imagen' });
+                if (!imageUpdated) return res.status(404).send({ message: 'El ejercicio no existe y no se ha podido añadir la imagen' });
 
                 return res.status(200).send({
                     ejercicio: imageUpdated
@@ -66,7 +66,7 @@ var GymController = {
                 $push: { imagenes: fileName }
             }, { new: true }, (err, imageUpdated) => {
                 if (err) return res.status(500).send("No se ha podido añadir la imagen");
-                if (!projectUpdated) return res.status(404).send({ message: 'El ejercicio no existe y no se ha podido añadir la imagen' });
+                if (!imageUpdated) return res.status(404).send({ message: 'El ejercicio no existe y no se ha podido añadir la imagen' });
 
                 return res.status(200).send({
                     ejercicio: imageUpdated
@@ -77,7 +77,7 @@ var GymController = {
                 $push: { imagenes: fileName }
             }, { new: true }, (err, imageUpdated) => {
                 if (err) return res.status(500).send("No se ha podido añadir la imagen");
-                if (!projectUpdated) return res.status(404).send({ message: 'El ejercicio no existe y no se ha podido añadir la imagen' });
+                if (!imageUpdated) return res.status(404).send({ message: 'El ejercicio no existe y no se ha podido añadir la imagen' });
 
                 return res.status(200).send({
                     ejercicio: imageUpdated
@@ -88,7 +88,7 @@ var GymController = {
 
     },
     uploadMusculoImage: function (req, res) {
-        var projectId = req.params.id;
+        var projectId = req.params.id;        
         var nombreMusculo = req.params.nombre;
 
         var fileName = req.file;
@@ -103,7 +103,7 @@ var GymController = {
                 $push: { imagenes: fileName }
             }, { new: true }, (err, imageUpdated) => {
                 if (err) return res.status(500).send("No se ha podido añadir la imagen");
-                if (!projectUpdated) return res.status(404).send({ message: 'El músculo no existe y no se ha podido añadir la imagen' });
+                if (!imageUpdated) return res.status(404).send({ message: 'El músculo no existe y no se ha podido añadir la imagen' });
 
                 return res.status(200).send({
                     musculol: imageUpdated
@@ -114,7 +114,7 @@ var GymController = {
                 $push: { imagenes: fileName }
             }, { new: true }, (err, imageUpdated) => {
                 if (err) return res.status(500).send("No se ha podido añadir la imagen");
-                if (!projectUpdated) return res.status(404).send({ message: 'El músculo no existe y no se ha podido añadir la imagen' });
+                if (!imageUpdated) return res.status(404).send({ message: 'El músculo no existe y no se ha podido añadir la imagen' });
 
                 return res.status(200).send({
                     musculol: imageUpdated
@@ -127,6 +127,8 @@ var GymController = {
 
 
 }
+
+module.exports = GymController;
 
 
 

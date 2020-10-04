@@ -89,7 +89,7 @@ var UserController = {
 
     },
     //Actualiza los datos del usuario
-    updateStateUser: function (req, res) {
+    updateStatusUser: function (req, res) {
         var body = req.body;
         var nickname = body.nickname;
 
@@ -122,7 +122,7 @@ var UserController = {
 
     },
      //Actualiza las clases del usuario
-     updateClassUser: function (req, res) {
+     updateClaseUser: function (req, res) {
         var body = req.body;
         var nickname = body.nickname;
 
@@ -147,4 +147,4 @@ var UserController = {
 }
 
 
-module.exports = controllerUser;
+module.exports = UserController;
