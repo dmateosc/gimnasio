@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-
+import { Global } from './gobal';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
+
+  public url = environment.url;
   constructor(private http: HttpClient) { }
 
     isLogged(){
@@ -19,8 +22,8 @@ export class AuthenticationService {
 
     }
 
-    login(username: string, password: string) {
-        return this.http.post<any>(`/login`, { username: username, password: password })
+    login(nickname: string, password: string) {
+        return this.http.post<any>(this.url+'login', { nickname: nickname, password: password })
             .pipe(map(user => {
                 // login successful if there's a jwt token in the response
                 if (user) {
