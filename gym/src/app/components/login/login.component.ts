@@ -10,8 +10,10 @@ import { first } from 'rxjs/operators';
   providers: [AuthenticationService]
 })
 export class LoginComponent implements OnInit {
-
-  loginForm: FormGroup;
+    
+  
+    //Formulario de inicio
+    loginForm: FormGroup;
     loading = false;
     submitted = false;
     returnUrl: string;
@@ -25,7 +27,7 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
-            username: ['', Validators.required],
+            nickname: ['', Validators.required],
             password: ['', Validators.required]
         });
 
@@ -33,7 +35,7 @@ export class LoginComponent implements OnInit {
         this.authenticationService.logout();
 
         // get return url from route parameters or default to '/'
-        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/login';
     }
 
     // convenience getter for easy access to form fields
@@ -48,7 +50,7 @@ export class LoginComponent implements OnInit {
         }
 
         this.loading = true;
-        this.authenticationService.login(this.f.username.value, this.f.password.value)
+        this.authenticationService.login(this.f.nickname.value, this.f.password.value)
             .pipe(first())
             .subscribe(
                 data => {
