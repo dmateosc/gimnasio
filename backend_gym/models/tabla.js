@@ -3,7 +3,7 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
-var TablaSchema = new Schema({
+var Tabla= new Schema({
   usuario: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
@@ -25,4 +25,4 @@ var TablaSchema = new Schema({
   ],
 });
 
-module.exports = mongoose.model("Tabla", TablaSchema);
+module.exports = mongoose.model("Tabla", Tabla);

@@ -186,6 +186,34 @@ var GymController = {
       );
     }
   },
+  getImage: function(req,res){
+    var file = req.params.image;
+    var file = req.params.type;
+    if (type == 'muscle') {
+      var path_file = './uploads/muscles/'+file;
+    }
+    else if(type == 'exercise'){
+      var path_file = './uploads/exercise/'+file;
+    }else if(type == 'user'){
+      var path_file = './uploads/user/'+file;
+    }else{
+      return res.status(400).send("No hay un tipo definido");
+    }
+		
+		
+		//se usa exists aunque este deprecated
+		fs.exists(path_file, (exists) => {
+			if(exists){
+				return res.sendFile(path.resolve(path_file));
+			}else{
+				return res.status(200).send({
+					message: "No existe la imagen..."
+				});
+			}
+		});
+
+  }
+  
 };
 
 module.exports = GymController;

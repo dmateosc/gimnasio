@@ -43,6 +43,7 @@ var Usuario = Schema({
     },
   ],
   active: Boolean,
+  entrenamientos: [String]
 });
 
 module.exports = mongoose.model("User", Usuario);

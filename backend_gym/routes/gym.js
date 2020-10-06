@@ -11,7 +11,7 @@ var multer = require("multer");
 
 var userStore = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "./users");
+    cb(null, "./uploads/user");
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname);
@@ -20,7 +20,7 @@ var userStore = multer.diskStorage({
 
 var muscleStore = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "./muscles");
+    cb(null, "./uploads/muscles");
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname);
@@ -29,7 +29,7 @@ var muscleStore = multer.diskStorage({
 
 var exerciseStore = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "./exercise");
+    cb(null, "./uploads/exercise");
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname);
