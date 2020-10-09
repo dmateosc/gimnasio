@@ -1,7 +1,6 @@
 "use strict";
 
 var Tabla = require("../models/tabla");
-const usuario = require("../models/usuario");
 var User = require("../models/usuario");
 var TrainingController = {
   getTrainingDay: function (req, res) {
@@ -27,15 +26,15 @@ var TrainingController = {
 
     var body = req.body;
     var nickname = body.usuario.nickname;
+    var userId = body.usuario.idUsuario;
     var tabla = new Tabla();
 
-    tabla.usuario = {
-      nombre : body.usuario.nombre,
-    };
+    tabla.usuario = nickname;
+    tabla.idUsuario = userId;
     tabla.dias = body.dias;
     tabla.ejercicios = {
-      ejercicio = body.ejercicios,
-      series = body.series
+      ejercicio : body.ejercicios,
+      series : body.series
     }
 
     tabla.save((err,trainingInsert) => {
@@ -53,3 +52,6 @@ var TrainingController = {
     })
   }
 };
+
+
+module.exports = TrainingController;

@@ -5,9 +5,11 @@
 var express = require("express");
 var GymController = require("../controllers/gym");
 var UserController = require("../controllers/user");
+var TrainingController = require("../controllers/training");
 
 var router = express.Router();
 var multer = require("multer");
+const { route } = require("../app");
 
 var userStore = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -65,5 +67,10 @@ router.post(
   multiMiddlewareExercise.single("image"),
   GymController.uploadEjercicioImage
 );
+//obtener imagenes
+router.get('/image/:image/:type',GymController.getImage);
+//Entrenamientos
+router.get('/training/:nickname/:day',TrainingController.getTrainingDay);
+router.post('/training',TrainingController.createTraining);
 
 module.exports = router;

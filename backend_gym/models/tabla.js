@@ -4,10 +4,8 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var Tabla= new Schema({
-  usuario: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
-  },
+  usuario: String,
+  idUsuario: String,
   dias: [Date],
   ejercicios: [
     {
