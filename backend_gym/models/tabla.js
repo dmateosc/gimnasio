@@ -10,8 +10,7 @@ var Tabla= new Schema({
   ejercicios: [
     {
       ejercicio: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Ejercicio",
+        nombre: String
       },
       series: [
         {

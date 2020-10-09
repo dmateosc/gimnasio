@@ -25,17 +25,33 @@ var TrainingController = {
   createTraining: function(req,res){
 
     var body = req.body;
-    var nickname = body.usuario.nickname;
-    var userId = body.usuario.idUsuario;
+    var nickname = body.nickname;
+    var userId = body.idUsuario;
     var tabla = new Tabla();
+    
+    body.ejercicios.forEach(element => {
+      var ejercicios = {
+        ejercicio: {
+          nombre: element.ejercicio.nombre
+          
+        },
+        series : element.series.map( serie => {
+          return {
+            peso: serie.peso,
+            repeticiones: serie.repeticiones
+          }
+
+        }
+          
+        )
+      }
+      tabla.ejercicios.push(ejercicios)
+      
+    });
 
     tabla.usuario = nickname;
     tabla.idUsuario = userId;
     tabla.dias = body.dias;
-    tabla.ejercicios = {
-      ejercicio : body.ejercicios,
-      series : body.series
-    }
 
     tabla.save((err,trainingInsert) => {
 
