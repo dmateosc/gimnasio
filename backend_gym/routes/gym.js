@@ -6,10 +6,12 @@ var express = require("express");
 var GymController = require("../controllers/gym");
 var UserController = require("../controllers/user");
 var TrainingController = require("../controllers/training");
+var EjercicioController = require("../controllers/exercise");
+const MusculoController = require("../controllers/muscle");
 
 var router = express.Router();
 var multer = require("multer");
-const { route } = require("../app");
+
 
 var userStore = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -42,6 +44,7 @@ var multiMiddlewareMuscle = multer({ storage: muscleStore });
 var multiMiddlewareExercise = multer({ storage: userStore });
 var multiMiddlewareUser = multer({ storage: exerciseStore });
 
+//Usuario
 router.get(
   ["/user/:nickname", "/user/:id", "/user/:email"],
   UserController.getUser
@@ -72,5 +75,13 @@ router.get('/image/:image/:type',GymController.getImage);
 //Entrenamientos
 router.get('/training/:nickname/:day',TrainingController.getTrainingDay);
 router.post('/training',TrainingController.createTraining);
+//Ejercicios
+router.get('/exercise/:nombre', EjercicioController.getEjercicio);
+router.post('/create-exercise', EjercicioController.createEjercicio);
+//Musculo
+router.get('/muslce/:nombre', MusculoController.getMusculo);
+router.post('/create-muslce', MusculoController.createMusculo);
+
+
 
 module.exports = router;

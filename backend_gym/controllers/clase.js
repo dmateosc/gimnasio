@@ -1,5 +1,5 @@
 //controlador de clases para comprobar las llamadas que se realizan y obtención de datos
-//Controlador del gym (aqui van los metodos y todo lo que se vaya a realizar)
+//Controlador del clase (aqui van los metodos y todo lo que se vaya a realizar)
 "use strict";
 
 var Clase = require("../models/clase");

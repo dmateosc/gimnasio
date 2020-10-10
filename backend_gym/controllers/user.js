@@ -1,11 +1,10 @@
 //Controlador del gym (aqui van los metodos y todo lo que se vaya a realizar)
 "use strict";
 
-const { findByIdAndUpdate } = require("../models/usuario");
+
+//No existe un actualizar usuario ya que el usuario no puede modificar algunos parametros
 var User = require("../models/usuario");
 var Clase = require("../models/clase");
-var controllerClase = require("./clase");
-var controllerGym = require("./gym");
 
 var UserController = {
   //obtener usuario
@@ -93,33 +92,27 @@ var UserController = {
   updateStatusUser: function (req, res) {
     var body = req.body;
     var nickname = body.nickname;
+    var objetivo = body.objetivo;
+    var categoria = body.categoria;
+    if (body.estado) {
+      var estado = {
+        fecha: Date.now(),
+        peso: body.estado.peso,
+        masa_coporal: body.estado.masa_coporal,
+        musculo: body.estado.musculo,
+        grasa: body.estado.grasa,
+        grasa_visceral: body.estado.grasa_visceral,
+      };
+    }
 
-    User.findOne(
-      { nickname: nickname, password: password },
-      (err, userLoged) => {
-        var objetivo = body.objetivo;
-        var categoria = body.categoria;
-        if (body.estado) {
-          var estado = {
-            fecha: Date.now(),
-            peso: body.estado.peso,
-            masa_coporal: body.estado.masa_coporal,
-            musculo: body.estado.musculo,
-            grasa: body.estado.grasa,
-            grasa_visceral: body.estado.grasa_visceral,
-          };
-        }
-
-        //Se actualizan los campos de estado
-        User.updateOne(
-          { nickname: nickname },
-          {
-            $set: { objetivo: objetivo, categoria: categoria },
-            $push: {
-              estado: estado,
-            },
-          }
-        );
+    //Se actualizan los campos de estado
+    User.updateOne(
+      { nickname: nickname },
+      {
+        $set: { objetivo: objetivo, categoria: categoria },
+        $push: {
+          estado: estado,
+        },
       }
     );
   },
@@ -128,22 +121,16 @@ var UserController = {
     var body = req.body;
     var nickname = body.nickname;
 
-    User.findOne(
-      { nickname: nickname, password: password },
-      (err, userLoged) => {
-        var clase = new Clase();
+    var clase = new Clase();
+    clase.nombre = body.nombre;
 
-        clase.nombre = body.nombre;
-
-        //Se actualizan los campos de estado
-        User.updateOne(
-          { nickname: nickname },
-          {
-            $push: {
-              clase: clase,
-            },
-          }
-        );
+    //Se actualizan los campos de estado
+    User.updateOne(
+      { nickname: nickname },
+      {
+        $push: {
+          clase: clase,
+        },
       }
     );
   },
