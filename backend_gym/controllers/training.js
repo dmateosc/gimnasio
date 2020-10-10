@@ -61,7 +61,9 @@ var TrainingController = {
 
       User.findOneAndUpdate({nickname: nickname}, {$push: {
         entrenamientos: trainingInsert._id
-      }});
+      }},(err,updateTraining) =>{
+        if(err) console.log(err);
+      });
       return res.status(200).send({
         message: "Se ha insertado correctamente"
       });

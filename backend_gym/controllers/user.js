@@ -35,6 +35,7 @@ var UserController = {
           return res.status(400).send("El usuario ya existe");
         } else {
           user.nombre = body.nombre;
+          user.password = body.password;
           user.apellidos = body.apellidos;
           user.dni = body.apellidos || "";
           user.edad = body.edad;
@@ -45,12 +46,13 @@ var UserController = {
               user.categoria.push(element);
             });
           }
-          user.entrenador = null;
-          user.estado = null;
+          user.entrenador = "";
+          user.estado = [];
           user.objetivo = body.objetivo;
-          user.clases = null;
-          user.pagos = null;
+          user.clases = [];
+          user.pagos = [];
           user.active = true;
+          user.entrenamientos = [];
           user.save((err, userStored) => {
             if (err)
               return res
