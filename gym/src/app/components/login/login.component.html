@@ -1,1 +1,17 @@
-<p>login works!</p>
+
+
+<div class="container">
+
+    <form action=" " #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <label for="nickname">Usuario</label>
+        <input type="text" name="nickname" #nickname="ngModel" [(ngModel)]="user._nickname" placeholder="Introducte tu usuario" required>
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" #password="ngModel" [(ngModel)]="user._password" placeholder="Introducte tu usuario" required>
+        <input type="submit" value="Log In">
+    </form>
+
+
+    <button><a [routerLink]="['/create-user']">Sign Up</a></button>
+
+
+</div>

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { first } from 'rxjs/operators';
+import { Users } from 'src/app/models/user/users';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,19 +18,19 @@ export class LoginComponent implements OnInit {
     loading = false;
     submitted = false;
     returnUrl: string;
+    public user : Users;
 
     constructor(
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
-       ) {}
+       ) {
+           this.user = new Users('','','','','','',null,'',null,null,'',null,null,null,false,null);
+       }
 
     ngOnInit() {
-        this.loginForm = this.formBuilder.group({
-            nickname: ['', Validators.required],
-            password: ['', Validators.required]
-        });
+      
 
         // reset login status
         this.authenticationService.logout();
@@ -41,8 +42,10 @@ export class LoginComponent implements OnInit {
     // convenience getter for easy access to form fields
     get f() { return this.loginForm.controls; }
 
-    onSubmit() {
+    onSubmit(e) {
         this.submitted = true;
+        
+        this.loginForm = this.formBuilder.group(e.form.controls);
 
         // stop here if form is invalid
         if (this.loginForm.invalid) {
@@ -54,7 +57,7 @@ export class LoginComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
-                    this.router.navigate([this.returnUrl]);
+                    this.router.navigate(['/home']);
                 },
                 error => {
                    
