@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CreateUserComponent } from './components/create-user/create-user/create-user.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
 import { ExerciseComponent } from './components/exercise/exercise.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';

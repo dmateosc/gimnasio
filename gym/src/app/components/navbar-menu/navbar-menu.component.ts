@@ -31,6 +31,7 @@ export class NavbarMenuComponent implements OnInit {
     this.submitted =
     this.authGuard.canActivate &&
     this.currentRoute != '/login' &&
+    this.currentRoute != '/create-user' &&
     this.currentRoute != '/';
     return this.submitted;
   }

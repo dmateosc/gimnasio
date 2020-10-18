@@ -1,0 +1,23 @@
+
+  <div class="form-group">
+<form action="">
+
+<label for="nickname">Nickname</label>
+<input class="form-control" type="text" name="nickname" id="nickname" #nickname="ngModel" [(ngModel)]="user._nickname">
+<label for="name">Nombre</label>
+<input class="form-control" type="text" name="name" id="name" #nombre="ngModel" [(ngModel)]="user._nombre">
+<label for="apellidos">Apellidos</label>
+<input class="form-control" type="text" name="apellidos" id="apellidos" #apellidos="ngModel" [(ngModel)]="user._apellidos">
+<label for="password">Contraseña</label>
+<input class="form-control" type="password" name="password" id="password" #password="ngModel" [(ngModel)]="user._password">
+<label for="password2">Confirmar Contraseña</label>
+<input class="form-control" type="password" name="password2" id="password2"  [(ngModel)]="passwordValidation">
+<span *ngIf="checkPassword()">Las contraseñas introducidas no coinciden</span>
+
+<label for="dni">DNI</label>
+<input class="form-control" type="text" name="dni" id="dni" #dni="ngModel" [(ngModel)]="user._dni">
+
+
+
+</form>
+</div>

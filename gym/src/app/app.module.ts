@@ -11,7 +11,7 @@ import { TrainingComponent } from './components/training/training.component';
 import { ClassComponent } from './components/class/class.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
-import { CreateUserComponent } from './components/create-user/create-user/create-user.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarMenuComponent } from './components/navbar-menu/navbar-menu.component';
 import { RouterLink } from '@angular/router';
