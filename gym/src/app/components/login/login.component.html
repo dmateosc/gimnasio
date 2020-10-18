@@ -1,17 +1,27 @@
+  <form action=" " #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <div class="form-group">
+      <label for="nickname">Usuario</label>
+      <input
+        type="text"
+        class="form-control"
+        name="nickname"
+        #nickname="ngModel"
+        [(ngModel)]="user._nickname"
+        placeholder="Introducte tu usuario"
+        required
+      />
+      <label for="password">Contraseña</label>
+      <input
+        type="password"
+        class="form-control"
+        name="password"
+        #password="ngModel"
+        [(ngModel)]="user._password"
+        placeholder="Introducte tu usuario"
+        required
+      />
+    </div>
+    <input type="submit" class="btn btn-primary mb-2" value="Log In" />
+  </form>
 
-
-<div class="container">
-
-    <form action=" " #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-        <label for="nickname">Usuario</label>
-        <input type="text" name="nickname" #nickname="ngModel" [(ngModel)]="user._nickname" placeholder="Introducte tu usuario" required>
-        <label for="password">Contraseña</label>
-        <input type="password" name="password" #password="ngModel" [(ngModel)]="user._password" placeholder="Introducte tu usuario" required>
-        <input type="submit" value="Log In">
-    </form>
-
-
-    <button><a [routerLink]="['/create-user']">Sign Up</a></button>
-
-
-</div>
+  <button><a [routerLink]="['/create-user']">Sign Up</a></button>

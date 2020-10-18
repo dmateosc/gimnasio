@@ -13,6 +13,8 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { CreateUserComponent } from './components/create-user/create-user/create-user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarMenuComponent } from './components/navbar-menu/navbar-menu.component';
+import { RouterLink } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     ClassComponent,
     LoginComponent,
     HomeComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    NavbarMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [RouterLink],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

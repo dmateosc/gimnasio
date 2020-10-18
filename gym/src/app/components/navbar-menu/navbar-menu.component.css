@@ -1,0 +1,12 @@
+.navbar li{
+    text-decoration: none;
+    background-color: rgb(88, 153, 108);
+    width: 25%;
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+}
+.navbar ul{
+    width: 100%;
+    display: block;
+}
