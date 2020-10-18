@@ -26,28 +26,28 @@ var UserController = {
     //var clase = new Clase();
 
     var body = req.body;
-    user.nickname = body.nickname;
+    user.nickname = body._nickname;
     User.find(
-      { nickname: body.nickname, email: body.email },
+      { nickname: body._nickname, email: body._email },
       (err, userExist) => {
         if (userExist.length >= 1) {
           return res.status(400).send("El usuario ya existe");
         } else {
-          user.nombre = body.nombre;
-          user.password = body.password;
-          user.apellidos = body.apellidos;
-          user.dni = body.apellidos || "";
-          user.edad = body.edad;
-          user.email = body.email;
+          user.nombre = body._nombre;
+          user.password = body._password;
+          user.apellidos = body._apellidos;
+          user.dni = body._apellidos || "";
+          user.edad = body._edad;
+          user.email = body._email;
 
-          if (body.categoria) {
-            body.categoria.forEach((element) => {
+          if (body._categoria) {
+            body._categoria.forEach((element) => {
               user.categoria.push(element);
             });
           }
           user.entrenador = "";
           user.estado = [];
-          user.objetivo = body.objetivo;
+          user.objetivo = body._objetivo;
           user.clases = [];
           user.pagos = [];
           user.active = true;
@@ -72,8 +72,8 @@ var UserController = {
   //inicio getId
   login: function (req, res) {
     var body = req.body;
-    var nickname = body.nickname;
-    var password = body.password;
+    var nickname = body._nickname;
+    var password = body._password;
 
     User.findOne(
       { nickname: nickname, password: password },
@@ -91,17 +91,17 @@ var UserController = {
   //Actualiza los datos del usuario
   updateStatusUser: function (req, res) {
     var body = req.body;
-    var nickname = body.nickname;
-    var objetivo = body.objetivo;
-    var categoria = body.categoria;
-    if (body.estado) {
+    var nickname = body._nickname;
+    var objetivo = body._objetivo;
+    var categoria = body._categoria;
+    if (body._estado) {
       var estado = {
         fecha: Date.now(),
-        peso: body.estado.peso,
-        masa_coporal: body.estado.masa_coporal,
-        musculo: body.estado.musculo,
-        grasa: body.estado.grasa,
-        grasa_visceral: body.estado.grasa_visceral,
+        peso: body._estado.peso,
+        masa_coporal: body._estado.masa_coporal,
+        musculo: body._estado.musculo,
+        grasa: body._estado.grasa,
+        grasa_visceral: body._estado.grasa_visceral,
       };
     }
 
@@ -119,10 +119,10 @@ var UserController = {
   //Actualiza las clases del usuario
   updateClaseUser: function (req, res) {
     var body = req.body;
-    var nickname = body.nickname;
+    var nickname = body._nickname;
 
     var clase = new Clase();
-    clase.nombre = body.nombre;
+    clase.nombre = body._nombre;
 
     //Se actualizan los campos de estado
     User.updateOne(
