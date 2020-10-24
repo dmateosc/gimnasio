@@ -4,12 +4,35 @@
 const Ejercicio = require("../models/ejercicio");
 
 var EjercicioController = {
-  //permite crear un ejercicio por su nombre
+  //permite obtener un ejercicio por su nombre
   getEjercicio: function (req, res) {
-    var params = req.params;
+    var params = req.body;
     var nombreEjercicio = params.ejercicio;
 
     Ejercicio.findOne({ nombre: nombreEjercicio }, (err, ejercicios) => {
+      if (err)
+        return res.status(500).send({
+          messageError: "Ha ocurrido un error al obtener el ejercicio",
+        });
+
+      if (!ejercicios)
+        return res
+          .status(404)
+          .send({ messageError: "No ha encontrado el registro" });
+
+      return res.status(200).send({
+        ejercicios: ejercicios,
+      });
+    });
+  },
+   //permite obtener un ejercicio por nombre de musculo
+   getEjercicioByMuscle: function (req, res) {
+    var params = req.params;
+    var musculos = params.musculos;
+
+    Ejercicio.find({ musculo: {
+      musculos
+    } }, (err, ejercicios) => {
       if (err)
         return res.status(500).send({
           messageError: "Ha ocurrido un error al obtener el ejercicio",
