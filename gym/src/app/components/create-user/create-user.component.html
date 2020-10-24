@@ -42,9 +42,10 @@
       type="password"
       name="password2"
       id="password2"
+      #password2="ngModel"
       [(ngModel)]="passwordValidation"
     />
-    <span *ngIf="checkPassword() && password.touched "
+    <span *ngIf="checkPassword() && password.touched && password2.touched"
       >Las contraseñas introducidas no coinciden</span
     >
 <br/>
@@ -65,5 +66,9 @@
     <input type="file" name="photo" id="photo" placeholder="Ajuntar foto">
 
     <input type="submit" value="Crear Usuario">
+    <div class="form-group">
+      <hr>
+      <input type="submit" value="Crear Usuario">
+    </div>
   </form>
 </div>

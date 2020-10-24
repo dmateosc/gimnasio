@@ -14,6 +14,7 @@ export class CreateUserComponent implements OnInit {
   public status: string;
   public user: Users;
   public passwordValidation: string;
+  public filesToUpload: Array<File>;
   userForm: FormGroup;
   constructor(
     private _userService: UserService,
@@ -55,4 +56,7 @@ export class CreateUserComponent implements OnInit {
       (error) => {}
     );
   }
+  fileChangeEvent(fileInput: any){
+		this.filesToUpload = <Array<File>>fileInput.target.files;
+	}
 }
