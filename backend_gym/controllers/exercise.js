@@ -79,31 +79,35 @@ var EjercicioController = {
   //Crea varios ejercicios
   createEjercicios: function (req, res) {
     var body = req.body;
-    var ejerciciosCreados = new Array();
-    for( var element in body){
-      var ejercicio = new Ejercicio();
-      ejercicio.nombre = element.nombre;
-      ejercicio.musculos = element.musculos;
-      ejercicio.imagen = element.imagen;
-      console.debug("El ejercicio a crear es " + ejercicio);
-      ejercicio.save((err, createdExercise) => {
-        if (err)
-          return res.status(500).send({
-            messageError: "Ha ocurrido un error al crear el ejercicio",
-          });
-        if (!createdExercise)
-          return res.status(400).send({
-            message: "No se ha registrado el ejercicio",
-          });
-        ejerciciosCreados.push(createdExercise.toString);
-        console.debug("Los ejercicios creados son " + ejerciciosCreados);
-      });
-    };
-
-
-    return res.status(200).send({
-      ejercicio: ejerciciosCreados
-    });
+    var ejerciciosCreados = [];
+    var c = 0;
+    
+     body.forEach(element => {
+        var ejercicio = new Ejercicio();
+        ejercicio.nombre = element.nombre;
+        ejercicio.musculos = element.musculos;
+        ejercicio.imagen = element.imagen;
+        console.debug("El ejercicio a crear es " + ejercicio);
+        ejercicio.save((err, createdExercise) => {
+          if (err)
+            return res.status(500).send({
+              messageError: "Ha ocurrido un error al crear el ejercicio",
+            });
+          if (!createdExercise)
+            return res.status(400).send({
+              message: "No se ha registrado el ejercicio",
+            });
+          c++;
+          ejerciciosCreados.push(createdExercise);
+          console.debug("Los ejercicios creados son " + ejerciciosCreados);
+          if(c == body.length){
+            return  res.status(200).send({
+              ejercicio: ejerciciosCreados,
+            })
+          }
+        });
+      })
+      
   },
 };
 module.exports = EjercicioController;
