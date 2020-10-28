@@ -14,12 +14,12 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', component: LoginComponent },
   { path: 'create-user', component: CreateUserComponent},
-  { path: 'home', component: HomeComponent, canActivate: [AuthenticationGuard]},
+  { path: 'home', component: HomeComponent, canActivate: [AuthenticationGuard], 
+  children : [
   { path: 'muscle', component: MuscleComponent,  canActivate: [AuthenticationGuard]},
   { path: 'user/:id', component: UserComponent , canActivate: [AuthenticationGuard]},
   { path: 'exercise/:muscle', component: ExerciseComponent , canActivate: [AuthenticationGuard]},
-  { path: 'training/:nickname', component: TrainingComponent , canActivate: [AuthenticationGuard]},
-  { path: '**', component: LoginComponent },
+  { path: 'training/:nickname', component: TrainingComponent , canActivate: [AuthenticationGuard]}]}
 ];
 
 @NgModule({

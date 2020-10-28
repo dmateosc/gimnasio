@@ -1,9 +1,10 @@
 import {Clases} from '../clase/clases'
 
 export class Users {
+  
 
   constructor(
-   public _nickname: String,
+   public nickname: String,
    public _password: String,
    public _photo: String,
    public _nombre: String,

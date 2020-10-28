@@ -1,8 +1,10 @@
-<div class="navbar" *ngIf="submited()">
+<div class="navbar">
     <ul>
+      <li><span><a routerLink="home">Principal</a></span></li>
       <li><span>Ejercicios</span></li>
-      <li><span>Entrenamiento</span></li>
+      <li><span><a [routerLink]="['training',nickname]">Entrenamiento</a></span></li>
       <li><span>Dietas</span></li>
-      <li><span>Usuario</span></li>
+      <li><span><a [routerLink]="['user', _id]">Usuario</a></span></li>
+      
     </ul>
   </div>

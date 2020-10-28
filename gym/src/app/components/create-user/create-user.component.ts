@@ -58,5 +58,8 @@ export class CreateUserComponent implements OnInit {
   }
   fileChangeEvent(fileInput: any){
 		this.filesToUpload = <Array<File>>fileInput.target.files;
-	}
+  }
+  comeBack(){
+    this._router.navigate(['/login']);
+  }
 }

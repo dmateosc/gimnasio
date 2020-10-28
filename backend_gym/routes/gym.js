@@ -45,10 +45,12 @@ var multiMiddlewareExercise = multer({ storage: userStore });
 var multiMiddlewareUser = multer({ storage: exerciseStore });
 
 //Usuario
-router.get(
-  ["/user/:nickname", "/user/:id", "/user/:email"],
-  UserController.getUser
-);
+// router.get(
+//   ["/user-nickname/:nickname", "/user-email/:email"],
+//   UserController.getUser
+// );
+
+router.get("/user-id/:id",UserController.getUserById);
 router.put("/user-status/:nickname", UserController.updateStatusUser);
 router.put("/user-class/:nickname", UserController.updateClaseUser);
 router.post("/create-user", UserController.createUser);

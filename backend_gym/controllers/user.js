@@ -8,10 +8,10 @@ var Clase = require("../models/clase");
 
 var UserController = {
   //obtener usuario
-  getUser: function (req, res) {
+  getUserById: function (req, res) {
     var params = req.params;
-    var nickname = params.nickname;
-    User.find({ nickname: nickname }, (err, user) => {
+    var id = params.id;
+    User.findById(id, (err, user) => {
       if (user) {
         return res.status(200).send({
           user: user,
@@ -72,8 +72,8 @@ var UserController = {
   //inicio getId
   login: function (req, res) {
     var body = req.body;
-    var nickname = body._nickname;
-    var password = body._password;
+    var nickname = body.nickname;
+    var password = body.password;
 
     User.findOne(
       { nickname: nickname, password: password },

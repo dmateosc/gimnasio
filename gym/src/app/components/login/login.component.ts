@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication.service';
@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   submitted = false;
   returnUrl: string;
   public user: Users;
+  @Output() logeo = new EventEmitter();
 
   constructor(
     private formBuilder: FormBuilder,
@@ -74,6 +75,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
         (data) => {
           this.router.navigate(['/home']);
+          this.logeo.emit();
         },
         (error) => {
           this.loading = false;
