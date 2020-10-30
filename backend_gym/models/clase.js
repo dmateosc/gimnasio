@@ -8,14 +8,14 @@ var Clase = Schema({
   instructor: [
     {
       nombre: String,
-    },
+    }
   ],
   horarios: [
     {
       hora: String,
       dia: Date,
       duracion: Number,
-    },
+    }
   ],
 });
 module.exports = mongoose.model("Clase", Clase);
