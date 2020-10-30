@@ -82,7 +82,7 @@ var GymController = {
 
     if (nombreEjercicio) {
       Ejercicio.updateOne(
-        { name: nombreEjercicio },
+        { nombre: nombreEjercicio },
         {
           $push: { imagenes: fileName },
         },
@@ -135,12 +135,12 @@ var GymController = {
     var fileName = req.file;
     var filePath = req.file.path;
     var fileSplit = filePath.split("\\");
-    var fileName = fileSplit[1];
+    var fileName = fileSplit[2];
     var extSplit = fileName.split(".");
     var fileExt = extSplit[1];
     if (nombreMusculo) {
       Musculo.updateOne(
-        { name: nombreMusculo },
+        { nombre: nombreMusculo },
         {
           $push: { imagenes: fileName },
         },

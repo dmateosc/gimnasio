@@ -41,8 +41,8 @@ var exerciseStore = multer.diskStorage({
 });
 
 var multiMiddlewareMuscle = multer({ storage: muscleStore });
-var multiMiddlewareExercise = multer({ storage: userStore });
-var multiMiddlewareUser = multer({ storage: exerciseStore });
+var multiMiddlewareExercise = multer({ storage: exerciseStore });
+var multiMiddlewareUser = multer({ storage: userStore });
 
 //Usuario
 // router.get(
@@ -58,7 +58,7 @@ router.post("/login", UserController.login);
 
 //Subida de imagenes
 router.post(
-  ["/image-muscle-id/:id", "/image-muscle-name/:nombre"],
+  "/image-muscle-name/:nombre",
   multiMiddlewareMuscle.single("image"),
   GymController.uploadMusculoImage
 );
@@ -68,9 +68,18 @@ router.post(
   GymController.uploadUserImage
 );
 router.post(
-  ["/image-exercise/:id", "/image-exercise/:nombre"],
+  "/image-exercise/:nombre",
   multiMiddlewareExercise.single("image"),
   GymController.uploadEjercicioImage
+);
+router.post(
+  "/image-exercises",
+  multiMiddlewareExercise.array('image'), function (req, res, next) {
+    // req.files is array of `photos` files
+    // req.body will contain the text fields, if there were any
+   
+    return res.status(200).send("Todo Ok");
+  }
 );
 //obtener imagenes
 router.get('/image/:image/:type',GymController.getImage);

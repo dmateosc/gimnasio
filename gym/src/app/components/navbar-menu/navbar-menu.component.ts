@@ -16,19 +16,15 @@ import { UserComponent } from '../user/user.component';
   styleUrls: ['./navbar-menu.component.css'],
 })
 export class NavbarMenuComponent implements OnInit, AfterViewInit {
-  public submitted: boolean;
-  public currentRoute: string;
+  
   public _id: string;
   public nickname : String;
-  public stopCount: Number;
+  public muscle : String;
   @ViewChildren(UserComponent) userComponent: UserComponent;
   
   constructor(private authGuard: AuthenticationGuard, private router: Router,
     private _userService: UserService) {
-    this.router.events.subscribe(event => {
-      if(event instanceof NavigationEnd)
-        this.currentRoute = event.url;
-      });
+    
 
    
   }

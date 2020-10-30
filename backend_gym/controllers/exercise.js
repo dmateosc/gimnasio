@@ -7,7 +7,7 @@ var EjercicioController = {
   //permite obtener un ejercicio por su nombre
   getEjercicio: function (req, res) {
     var params = req.body;
-    var nombreEjercicio = params.ejercicio;
+    var nombreEjercicio = params.ejercicio.toUpperCase();
 
     Ejercicio.findOne({ nombre: nombreEjercicio }, (err, ejercicios) => {
       if (err)
@@ -57,8 +57,8 @@ var EjercicioController = {
   createEjercicio: function (req, res) {
     var body = req.body;
     var ejercicio = new Ejercicio();
-    ejercicio.nombre = body.nombre;
-    ejercicio.musculos = body.musculos;
+    ejercicio.nombre = body.nombre.toUpperCase();
+    ejercicio.musculos = body.musculos.toUpperCase();
     ejercicio.imagen = [];
 
     ejercicio.save((err, createdExercise) => {
@@ -86,7 +86,7 @@ var EjercicioController = {
         var ejercicio = new Ejercicio();
         ejercicio.nombre = element.nombre;
         ejercicio.musculos = element.musculos;
-        ejercicio.imagen = element.imagen;
+        ejercicio.imagenes = element.imagen;
         console.debug("El ejercicio a crear es " + ejercicio);
         ejercicio.save((err, createdExercise) => {
           if (err)

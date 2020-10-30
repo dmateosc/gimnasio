@@ -7,7 +7,7 @@ var MusculoController = {
   //permite crear un Musculo por su nombre
   getMusculo: function (req, res) {
     var params = req.params;
-    var nombreMusculo = params.Musculo;
+    var nombreMusculo = params.nombre.toUpperCase();
 
     Musculo.findOne({ nombre: nombreMusculo }, (err, musculos) => {
       if (err)
