@@ -93,6 +93,7 @@ router.post('/create-exercise', EjercicioController.createEjercicio);
 router.post('/create-exercises', EjercicioController.createEjercicios);
 //Musculo
 router.get('/muscle/:nombre', MusculoController.getMusculo);
+router.get('/muscles', MusculoController.getMusculos);
 router.post('/create-muscle', MusculoController.createMusculo);
 
 

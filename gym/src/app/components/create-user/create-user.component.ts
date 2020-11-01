@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { timeout } from 'rxjs/operators';
 import { Users } from 'src/app/models/user/users';
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/services/user/user.service';
 @Component({
   selector: 'app-create-user',
   templateUrl: './create-user.component.html',

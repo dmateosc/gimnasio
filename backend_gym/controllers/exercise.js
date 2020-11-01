@@ -84,9 +84,9 @@ var EjercicioController = {
     
      body.forEach(element => {
         var ejercicio = new Ejercicio();
-        ejercicio.nombre = element.nombre;
-        ejercicio.musculos = element.musculos;
-        ejercicio.imagenes = element.imagen;
+        ejercicio.nombre = element.nombre.toUpperCase();
+        ejercicio.musculos = element.musculos.map(musculos => musculos.toUpperCase());
+        ejercicio.imagenes = element.imagenes;
         console.debug("El ejercicio a crear es " + ejercicio);
         ejercicio.save((err, createdExercise) => {
           if (err)

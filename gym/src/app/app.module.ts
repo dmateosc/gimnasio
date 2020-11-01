@@ -15,7 +15,7 @@ import { CreateUserComponent } from './components/create-user/create-user.compon
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarMenuComponent } from './components/navbar-menu/navbar-menu.component';
 import { RouterLink } from '@angular/router';
-import { DietaComponent } from './components/dietas/dieta/dieta.component';
+import { DietaComponent } from './components/dietas/dieta.component';
 
 @NgModule({
   declarations: [

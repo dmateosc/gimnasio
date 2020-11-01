@@ -7,7 +7,7 @@ import {
 import { filter } from 'rxjs/operators';
 import { AuthenticationGuard } from 'src/app/guards/authentication.guard';
 import { Users } from 'src/app/models/user/users';
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/services/user/user.service';
 import { UserComponent } from '../user/user.component';
 
 @Component({
