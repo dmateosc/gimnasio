@@ -36,5 +36,8 @@ export class MuscleComponent implements OnInit {
     );
 
   }
+  verEjercicios(){
+    
+  }
 
 }
