@@ -189,7 +189,7 @@ var GymController = {
   getImage: function(req,res){
     var file = req.params.image;
     var type = req.params.type;
-    if (type == 'muscle') {
+    if (type == 'muscles') {
       var path_file = './uploads/muscles/'+file;
     }
     else if(type == 'exercise'){

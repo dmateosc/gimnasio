@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarMenuComponent } from './components/navbar-menu/navbar-menu.component';
 import { RouterLink } from '@angular/router';
 import { DietaComponent } from './components/dietas/dieta.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { DietaComponent } from './components/dietas/dieta.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [RouterLink],
   bootstrap: [AppComponent]
