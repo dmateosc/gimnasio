@@ -1,0 +1,531 @@
+[{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e568d"
+  },
+  "musculos": [
+    "PIERNA"
+  ],
+  "imagenes": [
+    "abductor.gif"
+  ],
+  "nombre": "ABDUCTOR",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e5697"
+  },
+  "musculos": [
+    "HOMBRO"
+  ],
+  "imagenes": [
+    "encogimientos.jpg"
+  ],
+  "nombre": "ENCOGIMIENTOS",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e5698"
+  },
+  "musculos": [
+    "PIERNA"
+  ],
+  "imagenes": [
+    "esgrima.jpg"
+  ],
+  "nombre": "ESGRIMA",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e5699"
+  },
+  "musculos": [
+    "PIERNA"
+  ],
+  "imagenes": [
+    "extension_cuadriceps.jpg"
+  ],
+  "nombre": "EXTENSION CUADRICEPS",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e569a"
+  },
+  "musculos": [
+    "PIERNA"
+  ],
+  "imagenes": [
+    "femoral.jpg"
+  ],
+  "nombre": "FEMORAL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e568e"
+  },
+  "musculos": [
+    "PIERNA"
+  ],
+  "imagenes": [
+    "adductor.gif"
+  ],
+  "nombre": "ADDUCTOR",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e568f"
+  },
+  "musculos": [
+    "PECTORAL"
+  ],
+  "imagenes": [
+    "aperturas_maquina.gif"
+  ],
+  "nombre": "APERTURAS MAQUINA",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e5690"
+  },
+  "musculos": [
+    "PECTORAL"
+  ],
+  "imagenes": [
+    "aperturas.jpg"
+  ],
+  "nombre": "APERTURAS",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e5691"
+  },
+  "musculos": [
+    "PIERNA"
+  ],
+  "imagenes": [
+    "contraccion_gluteo.jpg"
+  ],
+  "nombre": "CONTRACCION GLUTEO",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e5692"
+  },
+  "musculos": [
+    "TRICEPS"
+  ],
+  "imagenes": [
+    "coz.jpg"
+  ],
+  "nombre": "COZ",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e5693"
+  },
+  "musculos": [
+    "PECTORAL"
+  ],
+  "imagenes": [
+    "cruces.jpg"
+  ],
+  "nombre": "CRUCES",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e5694"
+  },
+  "musculos": [
+    "HOMBRO"
+  ],
+  "imagenes": [
+    "deltoides_maquina.jpg"
+  ],
+  "nombre": "DELTOIDES MAQUINA",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e5695"
+  },
+  "musculos": [
+    "DORSAL"
+  ],
+  "imagenes": [
+    "dominadas.jpeg"
+  ],
+  "nombre": "DOMINADAS",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e5696"
+  },
+  "musculos": [
+    "PIERNA"
+  ],
+  "imagenes": [
+    "elevaciones_maquina.jpg"
+  ],
+  "nombre": "ELEVACIONES MAQUINA",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e569b"
+  },
+  "musculos": [
+    "PECTORAL",
+    "TRICEPS"
+  ],
+  "imagenes": [
+    "fondos.jpg"
+  ],
+  "nombre": "FONDOS",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e569c"
+  },
+  "musculos": [
+    "HOMBRO"
+  ],
+  "imagenes": [
+    "frontal.jpg"
+  ],
+  "nombre": "FRONTAL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e569d"
+  },
+  "musculos": [
+    "PIERNA"
+  ],
+  "imagenes": [
+    "gemelo_pie.jpg"
+  ],
+  "nombre": "GEMELO PIE",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e569e"
+  },
+  "musculos": [
+    "DORSAL"
+  ],
+  "imagenes": [
+    "gironda.jpg"
+  ],
+  "nombre": "GIRONDA",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e569f"
+  },
+  "musculos": [
+    "PIERNA"
+  ],
+  "imagenes": [
+    "hiperextensiones.jpg"
+  ],
+  "nombre": "HIPEREXTENSIONES",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56a0"
+  },
+  "musculos": [
+    "DORSAL"
+  ],
+  "imagenes": [
+    "jalones.jpg"
+  ],
+  "nombre": "JALONES",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56a1"
+  },
+  "musculos": [
+    "TRICEPS"
+  ],
+  "imagenes": [
+    "lagartijas.jpg"
+  ],
+  "nombre": "LAGARTIJAS",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56a2"
+  },
+  "musculos": [
+    "HOMBRO"
+  ],
+  "imagenes": [
+    "lateral.jpg"
+  ],
+  "nombre": "LATERAL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56a3"
+  },
+  "musculos": [
+    "HOMBRO"
+  ],
+  "imagenes": [
+    "multipower.jpg"
+  ],
+  "nombre": "MULTIPOWER",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56a4"
+  },
+  "musculos": [
+    "HOMBRO"
+  ],
+  "imagenes": [
+    "pajaro.jpg"
+  ],
+  "nombre": "PAJARO",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56a5"
+  },
+  "musculos": [
+    "PIERNA"
+  ],
+  "imagenes": [
+    "peso_muerto.jpg"
+  ],
+  "nombre": "PESO MUERTO",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56a6"
+  },
+  "musculos": [
+    "TRICEPS"
+  ],
+  "imagenes": [
+    "pico.jpg"
+  ],
+  "nombre": "PICO",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56a7"
+  },
+  "musculos": [
+    "TRICEPS"
+  ],
+  "imagenes": [
+    "picodos.jpg"
+  ],
+  "nombre": "PICO DOS MANOS",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56a8"
+  },
+  "musculos": [
+    "DORSAL"
+  ],
+  "imagenes": [
+    "polea_alta.jpg"
+  ],
+  "nombre": "POLEA ALTA",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56a9"
+  },
+  "musculos": [
+    "DORSAL"
+  ],
+  "imagenes": [
+    "polea_detras.jpg"
+  ],
+  "nombre": "POLEA DETRAS",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56aa"
+  },
+  "musculos": [
+    "PIERNA"
+  ],
+  "imagenes": [
+    "presnsa_atletica.jpg"
+  ],
+  "nombre": "PRESNSA ATLETICA",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56ab"
+  },
+  "musculos": [
+    "PECTORAL"
+  ],
+  "imagenes": [
+    "press_banca.jpg"
+  ],
+  "nombre": "PRESS BANCA",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56ac"
+  },
+  "musculos": [
+    "PECTORAL"
+  ],
+  "imagenes": [
+    "press_declinado.jpg"
+  ],
+  "nombre": "PRESS DECLINADO",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56ad"
+  },
+  "musculos": [
+    "TRICEPS"
+  ],
+  "imagenes": [
+    "press_frances.jpg"
+  ],
+  "nombre": "PRESS FRANCES",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56ae"
+  },
+  "musculos": [
+    "TRICEPS"
+  ],
+  "imagenes": [
+    "press_horizontal.jpg"
+  ],
+  "nombre": "PRESS HORIZONTAL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56af"
+  },
+  "musculos": [
+    "PECTORAL"
+  ],
+  "imagenes": [
+    "press_inclinado.jpg"
+  ],
+  "nombre": "PRESS INCLINADO",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56b0"
+  },
+  "musculos": [
+    "TRICEPS"
+  ],
+  "imagenes": [
+    "presses.jpg"
+  ],
+  "nombre": "PRESSES",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56b1"
+  },
+  "musculos": [
+    "DORSAL",
+    "PECTORAL"
+  ],
+  "imagenes": [
+    "pullower.jpg"
+  ],
+  "nombre": "PULLOWER",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56b2"
+  },
+  "musculos": [
+    "DORSAL"
+  ],
+  "imagenes": [
+    "remo_brazo.jpg"
+  ],
+  "nombre": "REMO BRAZO",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56b3"
+  },
+  "musculos": [
+    "DORSAL"
+  ],
+  "imagenes": [
+    "remo_maquina.jpg"
+  ],
+  "nombre": "REMO MAQUINA",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56b4"
+  },
+  "musculos": [
+    "DORSAL"
+  ],
+  "imagenes": [
+    "remo.jpg"
+  ],
+  "nombre": "REMO",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56b5"
+  },
+  "musculos": [
+    "HOMBRO"
+  ],
+  "imagenes": [
+    "rowing.jpg"
+  ],
+  "nombre": "ROWING",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56b6"
+  },
+  "musculos": [
+    "PIERNA"
+  ],
+  "imagenes": [
+    "sentadillas_maquina.jpg"
+  ],
+  "nombre": "SENTADILLAS MAQUINA",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56b7"
+  },
+  "musculos": [
+    "PIERNA"
+  ],
+  "imagenes": [
+    "sentadillas.jpg"
+  ],
+  "nombre": "SENTADILLAS",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9edfe70c1f754e880e56b8"
+  },
+  "musculos": [
+    "TRICEPS"
+  ],
+  "imagenes": [
+    "tiron_polea.jpg"
+  ],
+  "nombre": "TIRON POLEA",
+  "__v": 0
+}]

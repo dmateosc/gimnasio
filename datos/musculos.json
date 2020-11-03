@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "5f9ed89f690ec63078622fb1"
+  },
+  "imagenes": [
+    "pectoral.jpeg"
+  ],
+  "nombre": "Pectoral",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9ed8a7690ec63078622fb2"
+  },
+  "imagenes": [
+    "dorsal.jpeg"
+  ],
+  "nombre": "Dorsal",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9ed8ac690ec63078622fb3"
+  },
+  "imagenes": [
+    "hombros.jpeg"
+  ],
+  "nombre": "Hombros",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9ed904690ec63078622fb6"
+  },
+  "imagenes": [
+    "biceps.jpeg"
+  ],
+  "nombre": "Biceps",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9ed972690ec63078622fb7"
+  },
+  "imagenes": [
+    "triceps.jpeg"
+  ],
+  "nombre": "Triceps",
+  "__v": 0
+}]
