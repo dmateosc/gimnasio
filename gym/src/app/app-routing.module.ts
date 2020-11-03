@@ -5,6 +5,7 @@ import { ExerciseComponent } from './components/exercise/exercise.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { MuscleComponent } from './components/muscle/muscle.component';
+import { PrincipalComponent } from './components/principal/principal.component';
 import { TrainingComponent } from './components/training/training.component';
 import { UserComponent } from './components/user/user.component';
 import { AuthenticationGuard } from './guards/authentication.guard';
@@ -16,7 +17,7 @@ const routes: Routes = [
   { path: 'create-user', component: CreateUserComponent},
   { path: 'home', component: HomeComponent, canActivate: [AuthenticationGuard], 
   children : [
-  { path: 'home', component: HomeComponent, canActivate: [AuthenticationGuard]}, 
+  { path: 'home', component: PrincipalComponent, canActivate: [AuthenticationGuard]}, 
   { path: 'muscle', component: MuscleComponent,  canActivate: [AuthenticationGuard]},
   { path: 'user/:id', component: UserComponent , canActivate: [AuthenticationGuard]},
   { path: 'exercise/:muscle', component: ExerciseComponent , canActivate: [AuthenticationGuard]},
