@@ -17,6 +17,7 @@ import { NavbarMenuComponent } from './components/navbar-menu/navbar-menu.compon
 import { RouterLink } from '@angular/router';
 import { DietaComponent } from './components/dietas/dieta.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PrincipalComponent } from './components/principal/principal.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     CreateUserComponent,
     NavbarMenuComponent,
-    DietaComponent
+    DietaComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
