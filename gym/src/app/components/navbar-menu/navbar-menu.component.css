@@ -10,3 +10,6 @@
     width: 100%;
     display: block;
 }
+.navbar a{
+    text-decoration: none;
+}

@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'create-user', component: CreateUserComponent},
   { path: 'home', component: HomeComponent, canActivate: [AuthenticationGuard], 
   children : [
-  { path: 'home', component: PrincipalComponent, canActivate: [AuthenticationGuard]}, 
+  { path: 'principal', component: PrincipalComponent, canActivate: [AuthenticationGuard]}, 
   { path: 'muscle', component: MuscleComponent,  canActivate: [AuthenticationGuard]},
   { path: 'user/:id', component: UserComponent , canActivate: [AuthenticationGuard]},
   { path: 'exercise/:muscle', component: ExerciseComponent , canActivate: [AuthenticationGuard]},

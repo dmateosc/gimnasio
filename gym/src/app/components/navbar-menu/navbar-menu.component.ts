@@ -22,6 +22,8 @@ export class NavbarMenuComponent implements OnInit, AfterViewInit {
   public muscle : String;
   @ViewChildren(UserComponent) userComponent: UserComponent;
   
+
+
   constructor(private authGuard: AuthenticationGuard, private router: Router,
     private _userService: UserService) {
     
@@ -29,6 +31,7 @@ export class NavbarMenuComponent implements OnInit, AfterViewInit {
    
   }
   ngOnInit(): void {   
+    
     this.conseguirUsuario() 
   }
   ngAfterViewInit(){

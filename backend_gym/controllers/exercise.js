@@ -7,7 +7,7 @@ var EjercicioController = {
   //permite obtener un ejercicio por su nombre
   getEjercicio: function (req, res) {
     var params = req.body;
-    var nombreEjercicio = params.ejercicio.toUpperCase();
+    var nombreEjercicio = params.nombre.toUpperCase();
 
     Ejercicio.findOne({ nombre: nombreEjercicio }, (err, ejercicios) => {
       if (err)
@@ -28,12 +28,12 @@ var EjercicioController = {
   //permite obtener un ejercicio por nombre de musculo
   getEjercicioByMuscle: function (req, res) {
     var params = req.params;
-    var musculos = params.musculos;
+    var musculos = params.muscle;
 
     Ejercicio.find(
       {
-        musculo: {
-          musculos,
+        "musculos": {
+          $all: musculos
         },
       },
       (err, ejercicios) => {

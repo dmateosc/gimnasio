@@ -2,20 +2,17 @@
   <ul>
     <li *ngFor="let muscle of muscles">
       <div>
-        <a class="stretched-link "  (click)="verEjercicios(
-          muscle.nombre
-        )" >
-
-         
+        <a class="" (click)="verEjercicios(muscle.nombre)" >       
         <img
           src="{{
             url + 'image/' + muscle.imagenes[0].toString() + '/muscles'
           }}"
           alt=""
           style="width: 100px"
-        />
+        /></a>
+        {{ muscle.nombre | uppercase }}
         <hr />
-        <span>{{ muscle.nombre | uppercase }}</span></a>
+        
       </div>
     </li>
   </ul>

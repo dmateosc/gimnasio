@@ -74,7 +74,7 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         (data) => {
-          this.router.navigate(['/home']);
+          this.router.navigate(['/home/principal']);
           this.logeo.emit();
         },
         (error) => {

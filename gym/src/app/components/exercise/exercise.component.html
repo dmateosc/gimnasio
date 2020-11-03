@@ -1,1 +1,11 @@
-<p>exercise works!</p>
+<div id="ejercicios">
+<div *ngFor="let exercise of exercises;let i= index;">
+    <span >{{exercise.nombre}}</span>
+    <div *ngFor="let tabla of ejerciciosTabla[i][exercise.nombre]">
+        <span>{{tabla.peso}}</span>
+        <span>{{tabla.peso}}</span>
+    </div>
+
+</div>
+
+</div>
