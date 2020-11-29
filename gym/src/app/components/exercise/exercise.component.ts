@@ -28,9 +28,9 @@ export class ExerciseComponent implements OnInit {
   getExercises(muscle){
     this._exerciseService.getExercises(muscle).subscribe(
       response => {
-        this.exercises = response.ejercicios;
+        this.exercises = response.exercises;
         this.ejerciciosTabla = new Array();
-        response.ejercicios.forEach((element,index)=> {
+        response.exercises.forEach((element,index)=> {
           let nombre = element.nombre;
           let pesoRepeticion =  { [nombre] : [{"peso": 0, "repeticiones":0}]};
           

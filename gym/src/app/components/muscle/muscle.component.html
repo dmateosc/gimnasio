@@ -1,8 +1,12 @@
 <div>
-  <ul>
-    <li *ngFor="let muscle of muscles">
+  <ul class="row">
+    <li *ngFor="let muscle of muscles" class="col-xs-2">
       <div>
-        <a class="" (click)="verEjercicios(muscle.nombre)" >       
+        <a class=""  (click)="verEjercicios(
+          muscle.nombre
+        )" >
+
+         
         <img
           src="{{
             url + 'image/' + muscle.imagenes[0].toString() + '/muscles'

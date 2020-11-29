@@ -36,19 +36,19 @@ var EjercicioController = {
           $all: musculos
         },
       },
-      (err, ejercicios) => {
+      (err, exercises) => {
         if (err)
           return res.status(500).send({
             messageError: "Ha ocurrido un error al obtener el ejercicio",
           });
 
-        if (!ejercicios)
+        if (!exercises)
           return res
             .status(404)
             .send({ messageError: "No ha encontrado el registro" });
 
         return res.status(200).send({
-          ejercicios: ejercicios,
+          exercises: exercises,
         });
       }
     );
